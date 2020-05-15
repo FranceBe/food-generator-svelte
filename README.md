@@ -8,10 +8,11 @@ The Express server is pretty much the same, I'm only interrested in this all new
 You can run this project in production mode using `npm run start`
 
 
-You can run this project in development mode using `npm run start:dev`
+You can run this project in development mode using `npm run start:dev` // It is broken for now
 
 ## To Do
 
+- [ ] Fix watch mode
 - [ ] Front-End App
 - [ ] Testing
 - [ ] Coverage
