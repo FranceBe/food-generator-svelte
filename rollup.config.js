@@ -5,7 +5,7 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;
-
+console.log(production)
 export default {
 	input: 'src/main.js',
 	output: {
@@ -49,7 +49,8 @@ export default {
 		production && terser()
 	],
 	watch: {
-		clearScreen: false
+		clearScreen: false,
+		exclude: ['node_modules/**']
 	}
 };
 
