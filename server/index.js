@@ -7,12 +7,23 @@ const bodyParser = require('body-parser')
 const app = express()
 const port = process.env.PORT || 3000
 
-const DIST_DIR = path.join(__dirname, '../public')
+const DIST_DIR = path.join(__dirname, '../built')
 const HTML_FILE = path.join(DIST_DIR, 'index.html')
+
+const webpack = require('webpack')
+const webpackDevMiddleware = require('webpack-dev-middleware')
+const config = require('../webpack.config.js')
+const compiler = webpack(config)
 
 app.use(cors())
 app.use(bodyParser.json())
-app.use(express.static(DIST_DIR))
+// app.use(express.static(DIST_DIR))
+
+if (config.mode === 'development') {
+  app.use(webpackDevMiddleware(compiler, {
+    publicPath: config.output.publicPath,
+  }))
+}
 
 app.get('/api/puppy', (req, res) => {
   const baseUrl = 'http://www.recipepuppy.com/api'
