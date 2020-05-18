@@ -11,6 +11,7 @@ module.exports = {
     bundle: ['./src/main.js']
   },
   resolve: {
+    modules: ['src'],
     alias: {
       svelte: path.resolve('node_modules', 'svelte'),
       assets: path.join(__dirname, 'assets'),
@@ -19,9 +20,10 @@ module.exports = {
     mainFields: ['svelte', 'browser', 'module', 'main']
   },
   output: {
-    path: __dirname + '/built',
+    path: path.join(__dirname, 'built'),
     filename: '[name].js',
-    chunkFilename: '[name].[id].js'
+    chunkFilename: '[name].[id].js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -59,8 +61,9 @@ module.exports = {
   mode,
   plugins: [
     new HtmlWebpackPlugin({
-      inject: true,
-      template: './src/assets/index.html'
+      inject: false,
+      template: './src/assets/index.html',
+      filename: 'index.html'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css'

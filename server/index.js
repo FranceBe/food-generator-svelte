@@ -17,7 +17,7 @@ const compiler = webpack(config)
 
 app.use(cors())
 app.use(bodyParser.json())
-// app.use(express.static(DIST_DIR))
+app.use(express.static(DIST_DIR))
 
 if (config.mode === 'development') {
   app.use(webpackDevMiddleware(compiler, {

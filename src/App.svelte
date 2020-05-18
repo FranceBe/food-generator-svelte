@@ -1,11 +1,8 @@
 <script>
+	import H1 from 'components/H1/H1.svelte';
 	export let name;
 </script>
 
-<style>
-	h1 {
-		color: purple;
-	}
-</style>
-
-<h1>Hello {name}!</h1>
+<div>
+<H1>Hello {name}!</H1>
+</div>

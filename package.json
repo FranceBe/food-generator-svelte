@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npm run build && cross-env NODE_ENV=production node server/index.js",
-    "start:dev": "webpack && cross-env NODE_ENV=development nodemon server/index.js",
+    "start:dev": "webpack --mode development && cross-env NODE_ENV=development nodemon server/index.js",
     "build": "webpack --mode production",
     "test": "echo \"No test specified\" && exit 0"
   },
