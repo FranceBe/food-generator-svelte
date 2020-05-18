@@ -13,8 +13,9 @@ You can run this project in development mode using `npm run start:dev`
 ## To Do
 
 - [X] Fix watch mode
-- [ ] Front-End App
+- [X] Front-End App
+- [X] Eslint
 - [ ] Testing
 - [ ] Coverage
-- [ ] Git hooks
+- [X] Git hooks
 - [ ] Storybook
