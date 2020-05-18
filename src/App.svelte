@@ -3,6 +3,7 @@
 	import H1 from 'components/H1/H1.svelte';
 	import ButtonSelection from 'components/ButtonSelection/ButtonSelection.svelte';
 	import RandomRecipes from 'containers/RandomRecipes/RandomRecipes.svelte';
+	import RandomRecipesWithIngredient from 'containers/RandomRecipesWithIngredient/RandomRecipesWithIngredient.svelte';
 
 	const GET_RANDOM_RECIPES = 'Donnez moi des idées!'
 	const GET_RECIPES_FROM_FOOD_NAME = 'J\'ai une envie de...'
@@ -38,6 +39,6 @@
 		<RandomRecipes />
 	{/if}
 	{#if chosenContent === 'second-option'}
-		<div></div>
+		<RandomRecipesWithIngredient />
 	{/if}
 </div>
