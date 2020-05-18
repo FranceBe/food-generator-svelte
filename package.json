@@ -7,7 +7,8 @@
     "build": "webpack --mode production",
     "lint": "eslint --cache --ext .js src/",
     "test": "jest src --passWithNoTests",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "cover": "cross-env NODE_ENV=test jest --coverage --passWithNoTests"
   },
   "husky": {
     "hooks": {
