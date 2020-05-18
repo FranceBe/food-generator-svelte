@@ -43,6 +43,7 @@
         display: flex;
         flex-direction: row;
     }
+
     .global-container {
         display: flex;
         flex-direction: column;
@@ -51,13 +52,14 @@
         align-items: center;
         margin: 20px 0;
     }
+
     .not-found {
         margin: 10px;
         color: #EE6663;
     }
 </style>
 
-<Input label={'Une envie de...'} onChange={handleChange} />
+<Input label={'Une envie de...'} onChange={handleChange}/>
 <H2 title="...Combien voulez vous de propositions ?"/>
 <div>
     <ButtonBurgerShape className="with-marge" onClick={() => getRandomRecipes(1)} text="1"/>
@@ -72,7 +74,7 @@
     </div>
 {/if}
 {#if noRecipeFound}
-  <div class="not-found">
-      Désolé, nous n&apos;avons trouvé aucune recette qui correspond :&apos;(
-  </div>
+    <div class="not-found">
+        Désolé, nous n&apos;avons trouvé aucune recette qui correspond :&apos;(
+    </div>
 {/if}

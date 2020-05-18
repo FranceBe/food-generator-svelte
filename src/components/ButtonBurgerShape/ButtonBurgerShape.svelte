@@ -30,15 +30,18 @@
         #EBA789 79%);
         cursor: pointer;
     }
+
     button:focus {
         outline: none;
     }
+
     span {
         background-color: rgba(255, 255, 255, 0.7);
         padding: 5px;
         margin-bottom: 5px;
         font-size: 0.875rem;
     }
+
     .with-marge {
         margin-right: 10px;
     }
