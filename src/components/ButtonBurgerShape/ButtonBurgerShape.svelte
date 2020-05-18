@@ -3,7 +3,7 @@
     export let onClick
     export let className = ''
 
-    const onActionClick = e => {
+    export const onActionClick = e => {
         if (onClick) {
             onClick()
         } else {

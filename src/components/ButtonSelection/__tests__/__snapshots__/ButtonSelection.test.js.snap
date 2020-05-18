@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonSelection should match snapshot 1`] = `
+<body>
+  <div>
+    <div>
+      <button
+        class=""
+      >
+        My First option
+         
+      </button>
+      <button
+        class=""
+      >
+        My Second Option
+      </button>
+    </div>
+  </div>
+</body>
+`;

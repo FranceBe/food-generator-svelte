@@ -5,10 +5,13 @@ module.exports = {
   },
   env: {
     es6: true,
-    browser: true
+    browser: true,
+    node: true,
+    jest: true,
   },
   plugins: [
-    'svelte3'
+    'svelte3',
+    'jest'
   ],
   overrides: [
     {

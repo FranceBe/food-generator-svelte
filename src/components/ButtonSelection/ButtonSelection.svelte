@@ -54,8 +54,7 @@
             on:click={() => handleSelect(firstOptionName)}
     >
       {firstOption}
-    </button>
-    <button
+    </button><button
             class={active === secondOptionName ? 'is-active' : ''}
             on:click={() => handleSelect(secondOptionName)}
     >

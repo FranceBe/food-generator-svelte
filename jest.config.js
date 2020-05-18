@@ -3,9 +3,10 @@ const baseDir = __dirname
 module.exports = {
   clearMocks: true,
   collectCoverageFrom: [
-    'src/**/*.{js,svelte}',
-    '!src/**/*.test.{js,svelte}',
-    '!src/server/*.{js,svelte}',
+    'src/**/*.{svelte}',
+    'src/**/*.{js}',
+    '!src/**/*.test.{js}',
+    '!src/server/*.{js}',
   ],
   coverageThreshold: {
     global: {
