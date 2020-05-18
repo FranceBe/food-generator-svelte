@@ -1,8 +1,8 @@
 <script>
 	import { writable } from 'svelte/store';
 	import H1 from 'components/H1/H1.svelte';
-	import SelectionButton from 'components/SelectionButton/SelectionButton.svelte';
-	export let name;
+	import ButtonSelection from 'components/ButtonSelection/ButtonSelection.svelte';
+	import RandomRecipes from 'containers/RandomRecipes/RandomRecipes.svelte';
 
 	const GET_RANDOM_RECIPES = 'Donnez moi des idées!'
 	const GET_RECIPES_FROM_FOOD_NAME = 'J\'ai une envie de...'
@@ -11,6 +11,11 @@
 	const selectOption = option => {
 		selectedOption.set(option)
 	}
+
+	let chosenContent = ''
+	selectedOption.subscribe(value => {
+		chosenContent = value;
+	})
 </script>
 
 <style>
@@ -22,11 +27,17 @@
 	}
 </style>
 <div>
-<H1>Hello {name}!</H1>
-	<SelectionButton
+<H1 title={'Qu\'est-ce qu\'on mange ce soir ?'}/>
+	<ButtonSelection
 		selectedOption={selectedOption}
 		onSelect={selectOption}
 		firstOption={GET_RANDOM_RECIPES}
 		secondOption={GET_RECIPES_FROM_FOOD_NAME}
 	/>
+	{#if chosenContent === 'first-option'}
+		<RandomRecipes />
+	{/if}
+	{#if chosenContent === 'second-option'}
+		<div></div>
+	{/if}
 </div>

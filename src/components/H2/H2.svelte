@@ -2,11 +2,11 @@
     export let title
 </script>
 <style>
-    h1 {
-        font-size: 1.875rem;
+    h2 {
+        font-size: 1.25rem;
         text-align: center;
         text-shadow: 1px 1px #EBA789;
     }
  </style>
 
-<h1>{title}</h1>
+<h2>{title}</h2>
