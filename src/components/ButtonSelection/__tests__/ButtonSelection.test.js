@@ -1,7 +1,10 @@
-import { render, fireEvent } from '@testing-library/svelte'
+import { render, fireEvent, cleanup } from '@testing-library/svelte'
 import ButtonSelection from 'components/ButtonSelection/ButtonSelection.svelte'
 
 describe('ButtonSelection', () => {
+  afterEach(() => {
+    cleanup()
+  })
   it('should match snapshot', () => {
     const { container } = render(ButtonSelection, {
       props: {

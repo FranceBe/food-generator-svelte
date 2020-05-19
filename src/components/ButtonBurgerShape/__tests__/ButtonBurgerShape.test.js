@@ -1,7 +1,10 @@
-import { render, fireEvent } from '@testing-library/svelte'
+import { render, fireEvent, cleanup } from '@testing-library/svelte'
 import ButtonBurgerShape from 'components/ButtonBurgerShape/ButtonBurgerShape.svelte'
 
 describe('ButtonBurgerShape', () => {
+  afterEach(() => {
+    cleanup()
+  })
   it('should match snapshot', () => {
     const { container } = render(ButtonBurgerShape, {
       props: {
