@@ -20,3 +20,4 @@ The Express server is pretty much the same, I'm only interrested in this all new
 - [ ] Coverage
 - [X] Git hooks
 - [ ] Storybook
+- [ ] create github workflow for builds and tests
