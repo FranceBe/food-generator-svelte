@@ -4,7 +4,6 @@
     import ButtonBurgerShape from 'components/ButtonBurgerShape/ButtonBurgerShape.svelte'
     import RecipeCard from 'components/RecipeCard/RecipeCard.svelte'
     import { getRandomInt, getRandomNItems } from 'services/random.service'
-    import ReceipeCard from '../../components/RecipeCard/RecipeCard.svelte'
 
     let recipes = []
 
@@ -51,7 +50,7 @@
 {#if recipes.length > 0}
     <div class="global-container">
       {#each recipes as recipe}
-          <ReceipeCard title={recipe.title} href={recipe.href} ingredients={recipe.ingredients} src={recipe.thumbnail}/>
+          <RecipeCard title={recipe.title} href={recipe.href} ingredients={recipe.ingredients} src={recipe.thumbnail}/>
       {/each}
     </div>
 {/if}

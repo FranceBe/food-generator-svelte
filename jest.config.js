@@ -25,14 +25,14 @@ module.exports = {
   rootDir: `${baseDir}`,
   roots: [`${baseDir}/src`],
   transform: {
-    "^.+\\.svelte$": "jest-transform-svelte",
-    "^.+\\.js$": "babel-jest"
+    '^.+\\.svelte$': 'jest-transform-svelte',
+    '^.+\\.js$': 'babel-jest'
   },
-  moduleFileExtensions: ["js", "svelte"],
-  testPathIgnorePatterns: ["node_modules"],
+  moduleFileExtensions: ['js', 'svelte'],
+  testPathIgnorePatterns: ['node_modules'],
   bail: false,
   verbose: true,
-  transformIgnorePatterns: ["node_modules"],
-  setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
+  transformIgnorePatterns: ['node_modules'],
+  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect', `${baseDir}/jest.setup.js`],
   testRegex: '__tests__/.*\\.test\\.js$',
-};
+}

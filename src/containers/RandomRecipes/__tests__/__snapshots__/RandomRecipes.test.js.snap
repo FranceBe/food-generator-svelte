@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RandomRecipes should match snapshot 1`] = `
+<body>
+  <div>
+    <h2>
+      Combien voulez vous de propositions ?
+    </h2>
+     
+    <div>
+      <button
+        class="with-marge"
+      >
+        <span>
+          1
+        </span>
+      </button>
+       
+      <button
+        class="with-marge"
+      >
+        <span>
+          5
+        </span>
+      </button>
+       
+      <button
+        class=""
+      >
+        <span>
+          10
+        </span>
+      </button>
+    </div>
+     
+    
+  </div>
+</body>
+`;
