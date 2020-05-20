@@ -2,7 +2,6 @@
     export let firstOption
     export let secondOption
     export let onSelect
-    export let selectedOption
 
     let active = ''
     const firstOptionName = 'first-option'
