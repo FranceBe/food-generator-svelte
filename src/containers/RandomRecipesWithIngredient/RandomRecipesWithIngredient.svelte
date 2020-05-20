@@ -39,7 +39,19 @@
 </script>
 
 <style>
-    div {
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .group-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container {
         display: flex;
         flex-direction: row;
     }
@@ -59,12 +71,16 @@
     }
 </style>
 
-<Input label={'Une envie de...'} onChange={handleChange}/>
-<H2 title="...Combien voulez vous de propositions ?"/>
-<div>
-    <ButtonBurgerShape className="with-marge" onClick={() => getRandomRecipes(1)} text="1"/>
-    <ButtonBurgerShape className="with-marge" onClick={() => getRandomRecipes(5)} text="5"/>
-    <ButtonBurgerShape onClick={() => getRandomRecipes(10)} text="10"/>
+<div class="container">
+    <Input label={'Une envie de...'} onChange={handleChange}/>
+    <div class="group-container">
+        <H2 title="...Combien voulez vous de propositions ?"/>
+        <div class="button-container">
+            <ButtonBurgerShape className="with-marge" onClick={() => getRandomRecipes(1)} text="1"/>
+            <ButtonBurgerShape className="with-marge" onClick={() => getRandomRecipes(5)} text="5"/>
+            <ButtonBurgerShape onClick={() => getRandomRecipes(10)} text="10"/>
+        </div>
+    </div>
 </div>
 {#if recipes.length > 0}
     <div class="global-container">

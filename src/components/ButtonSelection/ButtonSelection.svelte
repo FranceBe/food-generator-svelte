@@ -14,7 +14,7 @@
 </script>
 <style>
     button {
-        height: 30px;
+        height: 50px;
         width: 300px;
         font-size: 0.875rem;
         font-weight: 700;
