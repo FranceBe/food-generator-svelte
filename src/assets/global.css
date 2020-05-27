@@ -27,3 +27,13 @@ body {
     color: #5F4C44;
     font-family: 'PlayfairDisplay', sans-serif;
 }
+
+a {
+    font-size: 1.875rem;
+    text-align: center;
+    text-shadow: 1px 1px #EBA789;
+    text-decoration: none;
+    color: #5F4C44;
+    font-weight: 700;
+    margin-left: 8px;
+}

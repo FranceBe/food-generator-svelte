@@ -4,9 +4,6 @@ import './assets/global.css'
 
 const app = new App({
   target: document.body,
-  props: {
-    name: 'to myself'
-  }
 })
 
 window.app = app

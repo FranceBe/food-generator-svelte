@@ -1,22 +1,18 @@
 <script>
+    // node modules
     import { writable } from 'svelte/store'
-    import H1 from 'components/H1/H1.svelte'
-    import ButtonSelection from 'components/ButtonSelection/ButtonSelection.svelte'
-    import RandomRecipes from 'containers/RandomRecipes/RandomRecipes.svelte'
-    import RandomRecipesWithIngredient from 'containers/RandomRecipesWithIngredient/RandomRecipesWithIngredient.svelte'
+    import { Router, Route } from 'svelte-routing'
+    import ApolloClient from 'apollo-boost';
+    import { setClient } from 'svelte-apollo';
 
-    const GET_RANDOM_RECIPES = 'Donnez moi des idées!'
-    const GET_RECIPES_FROM_FOOD_NAME = 'J\'ai une envie de...'
+    // intern components
+    import LinkToApollo from 'components/LinkToApollo/LinkToApollo.svelte'
+    import Home from 'containers/Home/Home.svelte'
 
-    const selectedOption = writable('')
-    const selectOption = option => {
-        selectedOption.set(option)
-    }
-
-    let chosenContent = ''
-    selectedOption.subscribe(value => {
-        chosenContent = value
-    })
+    // const
+    const client = new ApolloClient({ uri: 'http://localhost:4000/graphql' });
+    setClient(client);
+    export let url = ''
 </script>
 
 <style>
@@ -25,20 +21,10 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+        height: 100%;
     }
 </style>
-<div>
-    <H1 title={'Qu\'est-ce qu\'on mange ce soir ?'}/>
-    <ButtonSelection
-            selectedOption={selectedOption}
-            onSelect={selectOption}
-            firstOption={GET_RANDOM_RECIPES}
-            secondOption={GET_RECIPES_FROM_FOOD_NAME}
-    />
-  {#if chosenContent === 'first-option'}
-      <RandomRecipes/>
-  {/if}
-  {#if chosenContent === 'second-option'}
-      <RandomRecipesWithIngredient/>
-  {/if}
-</div>
+<Router url="{url}">
+    <Route path="apollo" component="{LinkToApollo}" />
+    <Route path="/"><Home /></Route>
+</Router>

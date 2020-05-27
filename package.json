@@ -23,6 +23,7 @@
     "@storybook/svelte": "5.3.18",
     "@testing-library/jest-dom": "5.7.0",
     "@testing-library/svelte": "3.0.0",
+    "apollo-boost": "0.4.9",
     "babel-jest": "26.0.1",
     "babel-loader": "8.1.0",
     "clean-webpack-plugin": "3.0.0",
@@ -32,6 +33,7 @@
     "eslint-plugin-jest": "23.13.1",
     "eslint-plugin-svelte3": "2.7.3",
     "file-loader": "6.0.0",
+    "graphql": "15.0.0",
     "html-loader": "1.1.0",
     "html-webpack-plugin": "4.3.0",
     "husky": "4.2.5",
@@ -41,7 +43,9 @@
     "mini-css-extract-plugin": "0.9.0",
     "style-loader": "1.2.1",
     "svelte": "3.0.0",
+    "svelte-apollo": "0.3.0",
     "svelte-loader": "2.13.6",
+    "svelte-routing": "1.4.2",
     "webpack": "4.43.0",
     "webpack-cli": "3.3.11",
     "webpack-dev-middleware": "3.7.2"
@@ -51,6 +55,8 @@
     "chalk": "4.0.0",
     "cors": "2.8.5",
     "express": "4.17.1",
+    "express-graphql": "0.9.0",
+    "graphql-tag": "2.10.3",
     "nodemon": "2.0.4",
     "request": "2.88.2"
   }

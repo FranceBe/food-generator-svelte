@@ -11,7 +11,7 @@ module.exports = {
     bundle: ['./src/main.js']
   },
   resolve: {
-    modules: ['src'],
+    modules: ['node_modules', 'src'],
     alias: {
       svelte: path.resolve('node_modules', 'svelte'),
       assets: path.join(__dirname, 'assets'),

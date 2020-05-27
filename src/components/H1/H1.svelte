@@ -2,6 +2,10 @@
     export let title
 </script>
 <style>
+    div {
+        display: flex;
+        align-items: center;
+    }
     h1 {
         font-size: 1.875rem;
         text-align: center;
@@ -9,4 +13,4 @@
     }
  </style>
 
-<h1>{title}</h1>
+<div><h1>{title}</h1><slot></slot></div>
