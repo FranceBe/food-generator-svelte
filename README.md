@@ -19,5 +19,5 @@ The Express server is pretty much the same, I'm only interrested in this all new
 - [ ] Testing
 - [ ] Coverage
 - [X] Git hooks
-- [ ] Storybook
+- [X] Storybook
 - [ ] create github workflow for builds and tests
