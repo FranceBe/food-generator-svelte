@@ -42,7 +42,7 @@
     "jest-transform-svelte": "2.1.1",
     "mini-css-extract-plugin": "0.9.0",
     "style-loader": "1.2.1",
-    "svelte": "3.0.0",
+    "svelte": "3.49.0",
     "svelte-apollo": "0.3.0",
     "svelte-loader": "2.13.6",
     "svelte-routing": "1.4.2",
